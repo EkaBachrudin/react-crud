@@ -1,0 +1,26 @@
+GET http://localhost:5000/users
+###
+GET http://localhost:5000/users/1
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Eka Bachrudin",
+    "email": "eka@gmai;.com",
+    "gender": " male"
+}
+
+###
+PATCH  http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+    "name": "Badriana",
+    "email": "eka@gmai;.com",
+    "gender": "male"
+}
+
+###
+DELETE  http://localhost:5000/users/2
