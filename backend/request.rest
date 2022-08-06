@@ -1,26 +1,26 @@
 GET http://localhost:5000/users
 ###
-GET http://localhost:5000/users/1
+GET http://localhost:5000/users/62ee962b4878f6e8bc3913be
 
 ###
 POST  http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Eka Bachrudin",
-    "email": "eka@gmai;.com",
+    "name": "Ana Update",
+    "email": "abdul@gmai;.com",
     "gender": " male"
 }
 
 ###
-PATCH  http://localhost:5000/users/1
+PATCH  http://localhost:5000/users/62ee962b4878f6e8bc3913be
 Content-Type: application/json
 
 {
-    "name": "Badriana",
-    "email": "eka@gmai;.com",
+    "name": "Iwan ANjay",
+    "email": "eka@gmai.com",
     "gender": "male"
 }
 
 ###
-DELETE  http://localhost:5000/users/2
+DELETE  http://localhost:5000/users/62ee96e44878f6e8bc3913c2

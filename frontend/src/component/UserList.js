@@ -37,14 +37,14 @@ useEffect(()=>{
                 </thead>
                 <tbody>
                     {users.map((user, index) => (
-                    <tr key={user.id}>
+                    <tr key={user._id}>
                         <td>{index + 1}</td>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user.gender}</td>
                         <td>
-                            <Link to={`edit/${user.id}`} className='button is-small is-info'>Edit</Link>
-                            <button onClick={()=>deleteUser(user.id)} className='button is-small is-danger'>Delete</button>
+                            <Link to={`edit/${user._id}`} className='button is-small is-info'>Edit</Link>
+                            <button onClick={()=>deleteUser(user._id)} className='button is-small is-danger'>Delete</button>
                         </td>
                     </tr>
                     ))}

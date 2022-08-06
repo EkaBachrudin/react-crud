@@ -1,18 +1,18 @@
-import {Sequelize} from "sequelize";
-import db from "../config/database.js";
+import mongoose from "mongoose";
 
-const {DataTypes} = Sequelize;
-
-const User = db.define('user', {
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    gender: DataTypes.STRING
-}, {
-    freezeTableName:true
+const User = mongoose.Schema({
+    name:{
+        type: String,
+        require: true
+    },
+    email:{
+        type: String,
+        require: true
+    },
+    gender:{
+        type: String,
+        require: true
+    }
 });
 
-export default User;
-
-(async()=>{
-    await db.sync();
-})();
+export default mongoose.model('Users', User);
